@@ -1,0 +1,29 @@
+{
+  "name": "elizaos-plugin-heisto",
+  "version": "1.0.0",
+  "description": "ElizaOS-compatible Heisto Guard input screening and read-only Solana arena testing evidence",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.mjs", "default": "./dist/index.mjs" }
+  },
+  "files": ["dist", "README.md", "PRIVACY.md", "SECURITY.md", "VERIFICATION.md", "LICENSE", "images", "examples"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:runtime": "node --test test/runtime.test.mjs",
+    "prepack": "node build.mjs"
+  },
+  "author": { "name": "Heisto", "email": "support@heisto.xyz" },
+  "license": "MIT",
+  "homepage": "https://heisto.xyz/#integrations",
+  "repository": { "type": "git", "url": "https://github.com/heisto-dev/plugin-heisto.git" },
+  "bugs": { "url": "https://github.com/heisto-dev/plugin-heisto/issues" },
+  "keywords": ["elizaos", "elizaos-plugin", "eliza", "plugin", "heisto", "solana", "prompt-injection", "guard"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" },
+  "peerDependencies": { "@elizaos/core": "2.0.5" },
+  "peerDependenciesMeta": { "@elizaos/core": { "optional": true } },
+  "devDependencies": { "@elizaos/core": "2.0.5" }
+}
